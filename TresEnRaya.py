@@ -42,25 +42,31 @@ def pedirModalidad2():
             print("Introduce una opción válida.")
     return opcion
 
-def pedirPosicion(jugador):
-    while True:
-        posicion = input(f"Jugador {jugador}, introduce la posición: ")
-        if posicion in posiciones:
-            break
-        print("Introduce una posición válida o disponible. La posición debe escribirse con el número (fila) seguido de la letra en mayúscula (columna).")
+def defPosicion(opcion, historialPosiciones):
+    if opcion == 1:
+        while True:
+            posicion = input("Introduce la posición: ")
+            if posicion in historialPosiciones:
+                break
+            print("Introduce una posición válida o disponible. La posición debe escribirse con el número (fila) seguido de la letra en mayúscula (columna).")    
+    elif opcion == 2:
+        posicion = random.choice(list(posiciones.keys())) 
     return posicion
 
-def registrarMovimiento(opcion2, posicion, historialPosiciones, fichas):
-    if opcion2 == 2 and fichas <= 0:
-        primera_posicion = list(historialPosiciones.keys())[0]
-        coordenada = historialPosiciones.pop(primera_posicion)
-        posiciones[primera_posicion] = coordenada
-    coordenada_nueva = posiciones[posicion]
+def registrarMovimiento(posicion, historialPosiciones):
+    posicionNueva = posiciones[posicion]
     del posiciones[posicion]
-    historialPosiciones[posicion] = coordenada_nueva
+    historialPosiciones[posicion] = posicionNueva
     dibujarTablero()
 
-def comprobarGanador(jugador, historialPosiciones):
+def registrarMovimiento2(posicionAntigua, posicionNueva, historialPosiciones):
+    del historialPosiciones[posicionAntigua]
+    historialPosiciones[posicionNueva] = posiciones[posicionNueva]
+    del posiciones[posicionNueva]
+    posiciones[posicionAntigua] = (int(posicionAntigua[0]), posicionAntigua[1])
+    dibujarTablero()
+
+def comprobarGanador(historialPosiciones):
     for columna in ("A", "B", "C"):
         if (1, columna) in historialPosiciones.values() and (2, columna) in historialPosiciones.values() and (3, columna) in historialPosiciones.values():
             return True
@@ -73,16 +79,29 @@ def comprobarGanador(jugador, historialPosiciones):
         return True
     return False
 
-# Esta función hace casi todo en uno: Pide la entrada de la posición, comprueba si es válida, registra el movimiento, actualiza el cuadro y comprueba si hay ganador.
-def operar(opcion, opcion2, jugador, fichas, historialPosiciones):
-    if opcion == 1:
-        posicion = pedirPosicion(jugador)
-    elif opcion == 2:
-        posicion = random.choice(list(posiciones))
-        registrarMovimiento(opcion2, posicion, historialPosiciones, fichas)
-        registrarMovimiento(opcion2, posicion, historialPosiciones, fichas)
-    if comprobarGanador(jugador, historialPosiciones):
-        print(f"El jugador {jugador} ha ganado.")
+def realizar(jugador, opcion, opcion2, historialPosiciones, fichas):
+    if jugador == 1:
+        print("Turno del jugador 1 (X).")
+        posicionNueva = defPosicion(1, posiciones)
+    if jugador == 2:
+        print("Turno del jugador 2 (O).")
+        posicionNueva = defPosicion(opcion, posiciones)
+    if opcion2 == 2 and fichas == 0:
+        if jugador == 1:
+            print("¿Qué posición quieres quitar?")
+            posicionAntigua = defPosicion(1, historialPosiciones)
+        if jugador == 2:
+            if opcion == 1:
+                print("¿Qué posición quieres quitar?")
+                posicionAntigua = defPosicion(1, historialPosiciones)
+            else:
+                posicionAntigua = random.choice(list(historialPosiciones.keys()))
+                print(f"El ordenador quita su ficha en {posicionAntigua}.") 
+        registrarMovimiento2(posicionAntigua, posicionNueva, historialPosiciones)
+    else:
+        registrarMovimiento(posicionNueva, historialPosiciones)
+        fichas -= 1
+    return fichas
 
 def turnos():
     opcion = pedirModalidad()
@@ -90,16 +109,15 @@ def turnos():
     if opcion2 == 1: fichas1 = fichas2 = 4
     elif opcion2 == 2: fichas1 = fichas2 = 3
     while True:
-        operar(1, opcion2, 1, fichas1, historialPosiciones1)
-        if comprobarGanador(1, historialPosiciones1):
+        fichas1 = realizar(1, opcion, opcion2, historialPosiciones1, fichas1)
+        if comprobarGanador(historialPosiciones1):
+            print("El jugador 1 (X) ha ganado.")
             break
-        operar(opcion, opcion2, 2, fichas2, historialPosiciones2)
-        if comprobarGanador(2, historialPosiciones2):
+        fichas2 = realizar(2, opcion, opcion2, historialPosiciones2, fichas2)
+        if comprobarGanador(historialPosiciones2):
+            print("El jugador 2 (O) ha ganado.")
             break
-        if opcion2 == 1:
-            fichas1 -= 1
-            fichas2 -= 1
-        if opcion2 == 1 and fichas1 == fichas2 == 0:
+        if opcion2 == 1 and fichas1 == 0 and fichas2 == 0:
             print("Se han acabado las fichas y nadie ha ganado. Se da como un empate.")
             break
     print("Fin del juego, gracias por jugar.")

@@ -42,16 +42,15 @@ def pedirModalidad2():
             print("Introduce una opción válida.")
     return opcion
 
-def defPosicion(opcion, historialPosiciones):
+def defPosicion(opcion, lista):
     if opcion == 1:
         while True:
             posicion = input("Introduce la posición: ")
-            if posicion in historialPosiciones:
-                break
+            if posicion in lista:
+                return posicion
             print("Introduce una posición válida o disponible. La posición debe escribirse con el número (fila) seguido de la letra en mayúscula (columna).")    
     elif opcion == 2:
-        posicion = random.choice(list(posiciones.keys())) 
-    return posicion
+        return random.choice(list(lista.keys())) 
 
 def registrarMovimiento(posicion, historialPosiciones):
     posicionNueva = posiciones[posicion]
@@ -93,10 +92,7 @@ def realizar(jugador, opcion, opcion2, historialPosiciones, fichas):
         if jugador == 2:
             if opcion == 1:
                 print("¿Qué posición quieres quitar?")
-                posicionAntigua = defPosicion(1, historialPosiciones)
-            else:
-                posicionAntigua = random.choice(list(historialPosiciones.keys()))
-                print(f"El ordenador quita su ficha en {posicionAntigua}.") 
+            posicionAntigua = defPosicion(opcion, historialPosiciones)
         registrarMovimiento2(posicionAntigua, posicionNueva, historialPosiciones)
     else:
         registrarMovimiento(posicionNueva, historialPosiciones)

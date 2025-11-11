@@ -26,9 +26,6 @@ def pedirNumero(txt):
         except:
             print("Tienes que introducir un número.")
 
-def pedirNombre(nombre="libro"):
-    return input(f"\nIntroduce el nombre del {nombre} : ")
-
 def interfaz():
     while True:
         print("1. Buscar libro.")
@@ -41,15 +38,20 @@ def interfaz():
         opcion = pedirNumero("Opción : ")
         match opcion:
             case 1:
-                biblioteca.buscarLibro(pedirNombre())
+                titulo = input("Introduce el título: ")
+                biblioteca.buscarLibro(titulo)
             case 2:
-                biblioteca.buscarAutor(pedirNombre("autor"))
+                autor = input("Introduce el autor: ")
+                biblioteca.buscarAutor(autor)
             case 3:
-                biblioteca.buscarGenero(pedirNombre("género"))
+                genero = input("Introduce el género: ")
+                biblioteca.buscarGenero(genero)
             case 4:
-                biblioteca.prestarLibro(pedirNombre())
+                titulo = input("Introduce el título.")
+                biblioteca.prestarLibro(titulo)
             case 5:
-                biblioteca.devolverLibro(pedirNombre())
+                titulo = input("Introduce el título.")
+                biblioteca.devolverLibro(titulo)
             case 6:
                 biblioteca.mostrarOrdenados()
             case 7:

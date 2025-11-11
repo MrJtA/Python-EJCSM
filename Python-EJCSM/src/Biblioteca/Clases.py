@@ -13,8 +13,8 @@ class Libro:
             return str((self.titulo, self.autor, self.genero, "NO DISPONIBLE"))
 
     def __eq__(self, value) -> bool:
-        if isinstance(value, type(self)):
-            return self.titulo
+        if isinstance(value, Libro):
+            return self.titulo == value.titulo and self.autor == value.autor
         return False
 
     def __lt__(self, value) -> bool:
@@ -36,36 +36,41 @@ class Biblioteca:
         if libro not in self.libros:
             self.libros.append(libro)
             self.libros.sort()
+            print("El libro se ha agregado a la biblioteca.")
         else:
-            print("El libro ya está en la biblioteca.")
+            print("El libro ya existe.")
 
-    def buscarLibro(self, titulo) -> Libro:
+    def buscarLibro(self, titulo) -> None:
+        encontrado = False
         for libro in self.libros:
             if libro.titulo == titulo:
-                return libro
-        print("El libro no existe.")
-        return None
+                print(libro)
+                encontrado = True
+        if not encontrado:
+            print("El libro no existe.")
 
-    def buscarAutor(self, autor) -> Libro:
+    def buscarAutor(self, autor) -> None:
+        encontrado = False
         for libro in self.libros:
             if libro.autor == autor:
-                return libro
-            else:
-                print("No existen libros de ese autor.")
-        return None
+                print(libro)
+                encontrado = True
+        if not encontrado:
+            print("No existen libros de ese autor.")
 
-    def buscarGenero(self, genero) -> Libro:
+    def buscarGenero(self, genero) -> None:
+        encontrado = False
         for libro in self.libros:
             if libro.genero == genero:
-                return libro
-            else:
-                print("No existen libros de ese género.")
-        return None
+                print(libro)
+                encontrado = True
+        if not encontrado:
+            print("No existen libros de ese género.")
 
     def mostrarOrdenados(self):
         self.libros.sort()
-        for i in self.libros:
-            print("\n",i)
+        for libro in self.libros:
+            print(libro)
 
     def prestarLibro(self, titulo) -> Libro:
         libro = self.buscarLibro(titulo)

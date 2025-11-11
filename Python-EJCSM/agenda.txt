@@ -1,5 +1,4 @@
-Versión 2.1
-- Completar aula y entender y repasar todo lo visto.
+Versión 2.2
 - Mirar lo nuevo.
 - Hacer los nuevos ejercicios.
 - Repasar todos los ejercicios hechos.

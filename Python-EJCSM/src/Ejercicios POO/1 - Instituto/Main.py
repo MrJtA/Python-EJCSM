@@ -12,6 +12,8 @@ profesor = Profesor("Daniel", "Bartolomé", "danibat", "goku123")
 listaProfesores.append(profesor)
 asignatura = Asignatura("ADAT", "1", profesor)
 listaAsignaturas.append(asignatura)
+profesor.listaAsignaturas.append(asignatura)
+asignaturas[asignatura.codigo] = asignatura.listaAlumnos
 
 def pedirNombre():
     nombre = input("Introduce el nombre: ")
@@ -75,6 +77,7 @@ def crearAsignatura():
         else: break
     asignatura = Asignatura(nombre, codigo, profesor)
     profesor.listaAsignaturas.append(asignatura)
+    listaAsignaturas.append(asignatura)
     print("Se ha creado la asignatura: ", asignatura)
     asignaturas[asignatura.codigo] = asignatura.listaAlumnos
 
@@ -82,7 +85,7 @@ def buscarAsignatura(codigo : str):
     for k, v in asignaturas.items():
         if k == codigo:
             print(k, v)
-            return codigo
+            return v
     else:
         print("No se ha encontrado a ningún asignatura con ese código.")
         return None
@@ -94,9 +97,42 @@ def matricularAlumnoAsignatura():
         return
     print("Se indicará el código de la asignatura.")
     asignatura = buscarAsignatura(pedirNombre())
-    for k, v in asignaturas.items():
-        if k == asignatura:
-            v.append(alumno)
+    if asignatura is None:
+        return
+    if alumno not in asignatura:
+        asignatura.append(alumno)
+        print(f" Alumno {alumno.nombre} matriculado con éxito.")
+    else:
+        print(f" El alumno {alumno.nombre} ya está matriculado en esta asignatura.")
+
+def loginProfesores():
+    profesor = buscarProfesor(pedirNombre())
+    if profesor is None:
+        return
+    print("Bienvenido a tu cuenta, ",profesor.nombre)
+    while True:
+        usuario = input("Introduce el usuario: ")
+        contraseña = input("Introduce la contraseña: ")
+        if usuario == profesor.user and contraseña == profesor.password:
+            break
+        else:
+            print("Usuario o contraseña incorrecta.")
+            continue
+    print("Estas son tus asignaturas: ")
+    mostrarLista(profesor.listaAsignaturas)
+    while True:
+        codigo = input("Introduce el código de alguna de tus asignaturas para ver los alumnos matriculados en ella (introduce 'Salir' para salir): ")
+        if codigo == "Salir":
+            return
+        encontrado = False
+        for k, v in asignaturas.items():
+            if k == codigo:
+                mostrarLista(v)
+                encontrado = True
+                continue
+        if not encontrado:
+            print("No se ha encontrado ninguna asignatura con dicho código.")
+            continue
 
 def pedirNumero():
     while True:
@@ -119,6 +155,7 @@ def menu():
         print("8. Buscar una asignatura por código.")
         print("9. Mostrar todas las asignaturas.")
         print("10. Matricular un alumno en una asignatura.")
+        print("11. Entrar a cuenta de profesor.")
         opcion = pedirNumero()
         match opcion:
             case 0:
@@ -152,6 +189,8 @@ def menu():
                 continue
             case 10:
                 matricularAlumnoAsignatura()
+            case 11:
+                loginProfesores()
             case _:
                 print("Introduce una opción válida.")
                 continue

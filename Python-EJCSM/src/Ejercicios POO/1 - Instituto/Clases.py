@@ -15,8 +15,16 @@ class Profesor:
         self.nombre = nombre
         self.apellido = apellido
         self.__user = user
-        self.__pasword = password
+        self.__password = password
         self.listaAsignaturas = []
+
+    @property
+    def user(self):
+        return self.__user
+
+    @property
+    def password(self):
+        return self.__password
 
     def __str__(self) -> str:
         return str(f"Profesor: {self.nombre}, {self.apellido}.")
@@ -30,8 +38,8 @@ class Asignatura:
         self.listaAlumnos = []
 
     def __str__(self) -> str:
-        return str(f"Asignatura: {self.nombre}, Código: {self.apellido}, Profesor: {self.profesor}.")
+        return str(f"Asignatura: {self.nombre}, Código: {self.codigo}, Profesor: {self.profesor.nombre}.")
 
-    @property
-    def setProfesor(self, nombreProfesor):
-        self.profesor = nombreProfesor
+    def setProfesor(self, nuevoProfesor):
+        self.profesor = nuevoProfesor
+        print(f"Profesor de {self.nombre} cambiado a {nuevoProfesor.nombre}.")

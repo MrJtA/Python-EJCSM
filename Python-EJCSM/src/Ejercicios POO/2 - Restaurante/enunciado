@@ -1,0 +1,36 @@
+Hemos creado el puesto de comida rápida Hot Cats, y necesitamos desarrollar una pequeña
+interfaz para poder desarrollar el negocio correctamente.
+Para ello se nos ha pedido realizar un programa con una única clase Trabajador.
+
+Esta clase tendrá los siguientes atributos:
+- Nombre (str)
+- Administrador (bool)
+- Propina (float)
+
+Aparte, necesitaremos los siguientes atributos comunes de clase:
+- Carta
+- Recaudación (float)
+Carta será un diccionario con los siguientes valores:
+- key : nombre del plato (str)
+- value : precio y disponibilidad ( [float, bool] )
+
+En el caso de que un trabajador sea administrador, significa que puede modificar la carta,
+tanto añadir platos, cambiar su precio, como indicar si están disponibles o no.
+
+Desarrolla un menú que realice lo siguiente:
+- Introduces tu nombre:
+- Si eres administrador la aplicación ofrecerá las siguientes opciones:
+- Ver recaudación del día.
+- Ver ranking de mejores empleados. Se mostrará los empleados por orden según
+cuanta propina hayan conseguido recaudar.
+- Ver carta completa (incluirá el estado de cada plato).
+- Modificar carta:
+- Añadir plato.
+- Cambiar estado de un plato ya existente.
+- Si no eres administrador:
+- Cantar carta (mostrará solo los platos disponibles y su precio).
+- Vender producto. Se introducirá el nombre del producto a vender y se realizará la
+venta. Se sumará el precio del plato a la recaudación y un 10% extra de ese precio irá
+destinado a la propina del trabajador.
+
+- En ambos casos la aplicación debe dejar salir para cambiar de usuario.

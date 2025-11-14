@@ -4,7 +4,7 @@ class Alumno:
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad
-        self.listaAsignaturas = []
+        self.listaAsignaturas = {}
 
     def __str__(self) -> str:
         return str(f"Alumno: {self.nombre}, {self.apellido}. Edad: {self.edad}")
@@ -31,15 +31,21 @@ class Profesor:
 
 class Asignatura:
 
-    def __init__(self, nombre, codigo, profesor):
-        self.nombre = nombre
+    def __init__(self, codigo, nombre, profesor):
         self.codigo = codigo
+        self.nombre = nombre
         self.profesor = profesor
         self.listaAlumnos = []
 
     def __str__(self) -> str:
         return str(f"Asignatura: {self.nombre}, Código: {self.codigo}, Profesor: {self.profesor.nombre}.")
 
-    def setProfesor(self, nuevoProfesor):
+    """
+    @property
+    def profesor(self):
+        return self.profesor
+
+    @profesor.setter
+    def profesor(self, nuevoProfesor):
         self.profesor = nuevoProfesor
-        print(f"Profesor de {self.nombre} cambiado a {nuevoProfesor.nombre}.")
+    """

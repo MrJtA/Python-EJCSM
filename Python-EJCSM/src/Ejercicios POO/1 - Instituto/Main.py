@@ -8,9 +8,11 @@ asignaturas = {}
 
 alumno = Alumno("Sara", "Larroda", 19)
 listaAlumnos.append(alumno)
+alumno = Alumno("Joaquin", "Castro", 19)
+listaAlumnos.append(alumno)
 profesor = Profesor("Daniel", "Bartolomé", "danibat", "goku123")
 listaProfesores.append(profesor)
-asignatura = Asignatura("ADAT", "1", profesor)
+asignatura = Asignatura("1", "ADAT", profesor)
 listaAsignaturas.append(asignatura)
 profesor.listaAsignaturas.append(asignatura)
 asignaturas[asignatura.codigo] = asignatura.listaAlumnos
@@ -75,7 +77,7 @@ def crearAsignatura():
         if profesor is None:
             continue
         else: break
-    asignatura = Asignatura(nombre, codigo, profesor)
+    asignatura = Asignatura(codigo, nombre, profesor)
     profesor.listaAsignaturas.append(asignatura)
     listaAsignaturas.append(asignatura)
     print("Se ha creado la asignatura: ", asignatura)
@@ -84,7 +86,9 @@ def crearAsignatura():
 def buscarAsignatura(codigo : str):
     for k, v in asignaturas.items():
         if k == codigo:
-            print(k, v)
+            print("Código:",k , end="")
+            print("Alumnos: ")
+            mostrarLista(v)
             return v
     else:
         print("No se ha encontrado a ningún asignatura con ese código.")
@@ -96,11 +100,13 @@ def matricularAlumnoAsignatura():
     if alumno is None:
         return
     print("Se indicará el código de la asignatura.")
-    asignatura = buscarAsignatura(pedirNombre())
+    codigo = pedirNombre()
+    asignatura = buscarAsignatura(codigo)
     if asignatura is None:
         return
     if alumno not in asignatura:
         asignatura.append(alumno)
+        alumno.listaAsignaturas[codigo] = 0
         print(f" Alumno {alumno.nombre} matriculado con éxito.")
     else:
         print(f" El alumno {alumno.nombre} ya está matriculado en esta asignatura.")
@@ -125,10 +131,21 @@ def loginProfesores():
         if codigo == "Salir":
             return
         encontrado = False
-        for k, v in asignaturas.items():
-            if k == codigo:
-                mostrarLista(v)
+        for k1, v1 in asignaturas.items():
+            if k1 == codigo:
+                for alumno in v1:
+                    print(alumno)
+                    for nota in alumno.listaAsignaturas.values():
+                        print("Nota:",nota)
                 encontrado = True
+                opcion = input("¿Desea modificar la nota de algún alumno? Introduzca 'Si' para hacerlo: ")
+                if opcion == "Si":
+                    nombreNuevo = pedirNombre()
+                    notaNueva = int(input("Introduzca la nueva nota: "))
+                    for alumno in v1:
+                        if alumno.nombre == nombreNuevo:
+                            alumno.listaAsignaturas[codigo] = notaNueva
+                            break
                 continue
         if not encontrado:
             print("No se ha encontrado ninguna asignatura con dicho código.")

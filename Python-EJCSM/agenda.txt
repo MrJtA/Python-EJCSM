@@ -1,4 +1,1 @@
-Versión 2.5
-- Mirar lo nuevo.
-- Hacer los nuevos ejercicios.
-- Repasar todos los ejercicios hechos.
+Versión 2.6

@@ -1,0 +1,3 @@
+Sara; O; 2; 1;
+Joaquin; X; 0; 0;
+Joaco; J; 0; 0;

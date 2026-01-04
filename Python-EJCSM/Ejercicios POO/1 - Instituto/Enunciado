@@ -1,0 +1,27 @@
+Implementar en Python las siguientes clases para posteriormente poder resolver el
+enunciado.
+
+Alumno : nombre, apellido, edad, lista de asignaturas.
+
+Asignatura : nombre, código, profesor.
+
+Profesor : nombre, apellido, user, password, lista de asignaturas.
+
+a) Declara datos de ejemplo en el código de todas las clases.
+
+b) realiza una función que devuelva un diccionario siguiendo la siguiente lógica.
+key : codigo_asignatura ( str )
+value : alumnos que cursan esa asignatura ( list [ Alumno ] )
+
+c) Crea un programa para profesores que te pida un login.
+Cuando el login sea correcto deberá darle la bienvenida al profesor correspondiente y le
+mostrará las asignaturas (junto a su código) que imparte.
+Cuando introduzca el código de alguna de estas debe mostrarle el listado de alumnos
+matriculados en esa asignatura.
+
+d) Modifica el programa anterior (añade los atributos necesarios) para que los alumnos
+tengan una nota asociada a cada asignatura y solo el profesor pueda cambiarla.
+El profesor tendrá la opción de evaluar a un alumno en concreto al realizar su login.
+
+e) ¿Podrían simplificarse y unirse las clases Alumno y Profesor? ¿Es necesaria la clase
+Asignatura?

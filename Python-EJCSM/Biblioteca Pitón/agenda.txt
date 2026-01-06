@@ -1,2 +1,0 @@
-- Mejorar modelo vista controlador, sobre todo en la vista
-- Mejorar simplicidad y comunicacion

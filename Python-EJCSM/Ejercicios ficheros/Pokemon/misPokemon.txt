@@ -1,0 +1,13 @@
+9;Blastoise;Lanza chorros de agua a presión por los cañones de su lomo.
+35;Clefairy;Es muy raro de ver y se dice que vive en montañas lunares.
+7;Squirtle;Se refugia en su caparazón y ataca disparando agua.
+34;Nidoking;Usa su poderosa cola para golpear y su cuerno para perforar.
+110;Weezing;Dos Koffing se fusionaron para mezclar sus gases tóxicos.
+79;Slowpoke;Es muy lento y tarda minutos en sentir dolor si lo golpean.
+23;Ekans;Se enrosca para descansar y puede engullir presas grandes.
+79;Slowpoke;Es muy lento y tarda minutos en sentir dolor si lo golpean.
+135;Jolteon;Sus pelos se vuelven agujas cargadas de electricidad.
+38;Ninetales;Se dice que sus nueve colas poseen poderes mágicos eternos.
+76;Golem;Su cuerpo es tan duro que ni las explosiones lo dañan.
+42;Golbat;Ataca sin aviso y chupa la sangre de sus víctimas.
+38;Ninetales;Se dice que sus nueve colas poseen poderes mágicos eternos.

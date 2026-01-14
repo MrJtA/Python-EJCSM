@@ -1,0 +1,151 @@
+1;Bulbasaur;Lleva una semilla en el lomo que crece junto con él.
+2;Ivysaur;El bulbo de su lomo crece y desprende un aroma dulce antes de florecer.
+3;Venusaur;La flor de su lomo absorbe energía solar para alimentarse.
+4;Charmander;La llama de su cola indica su salud y estado de ánimo.
+5;Charmeleon;Es muy agresivo y busca rivales fuertes constantemente.
+6;Charizard;Vuela buscando oponentes poderosos y exhala fuego ardiente.
+7;Squirtle;Se refugia en su caparazón y ataca disparando agua.
+8;Wartortle;Su cola peluda es un símbolo de longevidad muy apreciado.
+9;Blastoise;Lanza chorros de agua a presión por los cañones de su lomo.
+10;Caterpie;Libera un olor fétido por sus antenas para protegerse.
+11;Metapod;Su cuerpo es duro como el acero mientras prepara su evolución.
+12;Butterfree;Sus alas están cubiertas de polen tóxico que repele el agua.
+13;Weedle;Tiene un aguijón venenoso en la cabeza para defenderse.
+14;Kakuna;Permanece casi inmóvil mientras su cuerpo interno se transforma.
+15;Beedrill;Ataca velozmente con los aguijones de sus patas y cola.
+16;Pidgey;Es muy dócil y prefiere huir lanzando arena para escapar.
+17;Pidgeotto;Posee garras afiladas y vigila su territorio volando en círculos.
+18;Pidgeot;Vuela a velocidades supersónicas y tiene una vista increíble.
+19;Rattata;Es común y resistente, capaz de vivir en cualquier entorno.
+20;Raticate;Sus colmillos crecen sin parar y necesita roer cosas duras.
+21;Spearow;Vuela rápido en áreas pequeñas y emite chillidos agudos.
+22;Fearow;Tiene alas enormes que le permiten planear durante todo el día.
+23;Ekans;Se enrosca para descansar y puede engullir presas grandes.
+24;Arbok;Los patrones de su pecho intimidan y paralizan a sus rivales.
+25;Pikachu;Acumula electricidad en sus mejillas y la libera al combatir.
+26;Raichu;Su cola larga sirve de toma de tierra para soltar descargas.
+27;Sandshrew;Se enrolla en una bola para protegerse del calor y ataques.
+28;Sandslash;Se protege con sus púas dorsales y cava a gran velocidad.
+29;Nidoran♀;Es pequeña pero tiene cuernos venenosos muy peligrosos.
+30;Nidorina;Cuando está tranquila, repliega sus púas para no herir.
+31;Nidoqueen;Su cuerpo está cubierto de escamas duras como una armadura.
+32;Nidoran♂;Mueve sus orejas en todas direcciones para detectar peligros.
+33;Nidorino;Es muy colérico y embiste con su potente cuerno venenoso.
+34;Nidoking;Usa su poderosa cola para golpear y su cuerno para perforar.
+35;Clefairy;Es muy raro de ver y se dice que vive en montañas lunares.
+36;Clefable;Tiene un oído tan agudo que oye una aguja caer a kilómetros.
+37;Vulpix;Nace con una cola blanca que se divide en seis al crecer.
+38;Ninetales;Se dice que sus nueve colas poseen poderes mágicos eternos.
+39;Jigglypuff;Canta una nana hipnótica que duerme a quien la escuche.
+40;Wigglytuff;Su pelaje es extremadamente fino y su cuerpo muy elástico.
+41;Zubat;No tiene ojos y usa ultrasonidos para navegar por las cuevas.
+42;Golbat;Ataca sin aviso y chupa la sangre de sus víctimas.
+43;Oddish;Se entierra en el suelo dejando solo sus hojas a la vista.
+44;Gloom;Libera un olor fétido por su boca que marea a los rivales.
+45;Vileplume;Tiene los pétalos más grandes del mundo con polen tóxico.
+46;Paras;Unos hongos llamados tochukaso crecen en su espalda.
+47;Parasect;El hongo ha tomado el control total del cuerpo del Pokémon.
+48;Venonat;Sus ojos funcionan como radares para ver en la oscuridad.
+49;Venomoth;Esparce escamas venenosas al batir sus alas por la noche.
+50;Diglett;Vive bajo tierra y solo asoma la cabeza para ver el sol.
+51;Dugtrio;Un trío de Diglett que cavan túneles a gran profundidad.
+52;Meowth;Le encantan los objetos brillantes y sale a buscarlos de noche.
+53;Persian;Es elegante pero muy voluble y propenso a rasguñar.
+54;Psyduck;Sufre dolores de cabeza que activan sus poderes psíquicos.
+55;Golduck;Es un nadador experto que se ve en lagos al atardecer.
+56;Mankey;Se enfada con mucha facilidad y ataca sin previo aviso.
+57;Primeape;Vive siempre enfadado y persigue a sus presas sin descanso.
+58;Growlithe;Es muy fiel y ladra con fuerza para proteger su territorio.
+59;Arcanine;Es un Pokémon legendario en China por su belleza y velocidad.
+60;Poliwag;Su piel es fina y se puede ver su interior en espiral.
+61;Poliwhirl;Puede vivir fuera del agua, pero prefiere estar sumergido.
+62;Poliwrath;Es un nadador fuerte capaz de cruzar océanos nadando.
+63;Abra;Duerme 18 horas al día y usa Teletransporte si lo atacan.
+64;Kadabra;Emite ondas alfa que causan fallos en las máquinas cercanas.
+65;Alakazam;Su cerebro crece sin parar y recuerda todo lo que sucede.
+66;Machop;Entrena duro cada día para dominar todas las artes marciales.
+67;Machoke;Su cuerpo es tan fuerte que lleva un cinturón para controlarse.
+68;Machamp;Puede lanzar mil puñetazos en cuestión de segundos.
+69;Bellsprout;Su cuerpo delgado le permite esquivar ataques fácilmente.
+70;Weepinbell;Lanza un polvo tóxico para inmovilizar a sus presas.
+71;Victreebel;Atrae a sus presas con un olor dulce y las engulle.
+72;Tentacool;Su cuerpo es mayormente agua y tiene dos tentáculos.
+73;Tentacruel;Tiene 80 tentáculos que usa para atrapar y envenenar.
+74;Geodude;Parece una roca y es difícil distinguirlo en la montaña.
+75;Graveler;Baja rodando por las montañas sin importarle lo que pise.
+76;Golem;Su cuerpo es tan duro que ni las explosiones lo dañan.
+77;Ponyta;Sus cascos son más duros que el diamante al galopar.
+78;Rapidash;Le encanta correr y persigue a todo lo que se mueva rápido.
+79;Slowpoke;Es muy lento y tarda minutos en sentir dolor si lo golpean.
+80;Slowbro;Un Shellder se enganchó a su cola y ahora viven juntos.
+81;Magnemite;Flota usando ondas electromagnéticas y atrae metales.
+82;Magneton;Tres Magnemite se unen para formar este potente Pokémon.
+83;Farfetch'd;Siempre lleva un puerro que usa como arma y para anidar.
+84;Doduo;Tiene dos cabezas que nunca duermen al mismo tiempo.
+85;Dodrio;Sus tres cabezas representan la alegría, tristeza e ira.
+86;Seel;Vive en icebergs y le encanta nadar en aguas gélidas.
+87;Dewgong;Su cuerpo blanco lo camufla perfectamente en la nieve.
+88;Grimer;Nació del lodo contaminado y huele extremadamente mal.
+89;Muk;Está cubierto de sustancias tóxicas que matan las plantas.
+90;Shellder;Su concha es más dura que el diamante pero su cuerpo es blando.
+91;Cloyster;Lanza pinchos desde su concha reforzada para atacar.
+92;Gastly;Su cuerpo es gaseoso y puede envolver a un elefante.
+93;Haunter;Le gusta esconderse en la oscuridad y asustar a la gente.
+94;Gengar;Se esconde en las sombras y roba el calor del entorno.
+95;Onix;A medida que crece, su cuerpo de roca se vuelve más duro.
+96;Drowzee;Recuerda todos los sueños que come con su nariz.
+97;Hypno;Lleva un péndulo para hipnotizar y llevarse a sus presas.
+98;Krabby;Vive en la playa y sus pinzas se regeneran si las pierde.
+99;Kingler;Su pinza izquierda es enorme y tiene una fuerza brutal.
+100;Voltorb;Se parece a una Poké Ball y explota al menor contacto.
+101;Electrode;Come electricidad de la atmósfera y explota con facilidad.
+102;Exeggcute;Son seis huevos que se comunican por telepatía.
+103;Exeggutor;Sus cabezas piensan de forma independiente pero se llevan bien.
+104;Cubone;Lleva el cráneo de su madre muerta y llora en solitario.
+105;Marowak;Ha superado su tristeza y usa un hueso para combatir.
+106;Hitmonlee;Sus piernas se estiran para lanzar patadas devastadoras.
+107;Hitmonchan;Sus puñetazos son tan rápidos que parecen invisibles.
+108;Lickitung;Usa su lengua de dos metros para paralizar y limpiar.
+109;Koffing;Su cuerpo está lleno de gases tóxicos y explosivos.
+110;Weezing;Dos Koffing se fusionaron para mezclar sus gases tóxicos.
+111;Rhyhorn;Es muy fuerte pero su cerebro es pequeño y olvida por qué corre.
+112;Rhydon;Su piel es tan dura que puede vivir en el magma.
+113;Chansey;Pone huevos nutritivos y los comparte con gente herida.
+114;Tangela;Su cuerpo está cubierto de lianas azules que nunca paran de crecer.
+115;Kangaskhan;Lleva a su cría en la bolsa y la protege con su vida.
+116;Horsea;Se oculta tras una cortina de tinta si se siente en peligro.
+117;Seadra;Sus aletas y pinchos contienen un veneno muy potente.
+118;Goldeen;Es muy elegante al nadar, pero embiste con su cuerno.
+119;Seaking;En otoño, los machos hacen nidos en los lechos de los ríos.
+120;Staryu;Si pierde un brazo, este se regenera en poco tiempo.
+121;Starmie;Su núcleo brilla con los colores del arcoíris al atacar.
+122;Mr. Mime;Es un experto en la mímica y crea paredes invisibles.
+123;Scyther;Sus guadañas son capaces de cortar troncos de un golpe.
+124;Jynx;Mueve las caderas de forma rítmica para comunicarse.
+125;Electabuzz;Aparece durante las tormentas para absorber rayos.
+126;Magmar;Su cuerpo arde a una temperatura de 1200 grados.
+127;Pinsir;Atrapa a sus rivales con sus cuernos y no los suelta.
+128;Tauros;Es muy violento y corre azotándose con sus tres colas.
+129;Magikarp;Es el Pokémon más débil, solo sirve para salpicar.
+130;Gyarados;Es extremadamente destructivo y asola ciudades enteras.
+131;Lapras;Es muy inteligente y le encanta llevar gente sobre su lomo.
+132;Ditto;Puede transformarse en cualquier cosa que vea.
+133;Eevee;Su ADN inestable le permite evolucionar de varias formas.
+134;Vaporeon;Su estructura celular es similar a la del agua.
+135;Jolteon;Sus pelos se vuelven agujas cargadas de electricidad.
+136;Flareon;Almacena fuego en su cuerpo y alcanza altas temperaturas.
+137;Porygon;Es el primer Pokémon creado artificialmente por ordenador.
+138;Omanyte;Un Pokémon antiguo que fue regenerado a partir de un fósil.
+139;Omastar;Sus tentáculos son muy fuertes, pero su concha es pesada.
+140;Kabuto;Vivía en el fondo marino hace millones de años.
+141;Kabutops;Sus garras afiladas le servían para cazar presas en el agua.
+142;Aerodactyl;Un Pokémon prehistórico que surcaba los cielos con ferocidad.
+143;Snorlax;Solo se despierta para comer y vuelve a dormir enseguida.
+144;Articuno;Ave legendaria que controla el hielo y la nieve.
+145;Zapdos;Ave legendaria que vive en nubes de tormenta y lanza rayos.
+146;Moltres;Ave legendaria cuyas llamas curan sus propias heridas.
+147;Dratini;Muda de piel constantemente a medida que crece.
+148;Dragonair;Controla el clima y emite un aura mística.
+149;Dragonite;Es capaz de dar la vuelta al mundo en solo 16 horas.
+150;Mewtwo;Fue creado genéticamente para ser el Pokémon más fuerte.
+151;Mew;Se dice que posee el ADN de todos los Pokémon existentes.

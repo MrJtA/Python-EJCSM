@@ -11,7 +11,7 @@ rutaUsuarios = os.path.join(raizProyecto, "Vista", "bbddUsuarios.txt")
 biblioteca = Biblioteca(rutaLibros, rutaUsuarios)
 
 def pedirOpcion() -> int:
-    while (True):
+    while True:
         try:
             numero = int(input("Seleccione una opción: "))
             return numero

@@ -9,6 +9,21 @@ def leerFichero():
     except Exception as e:
         print("Error misterioso: ", type(e))
 
+def crearFichero():
+    nombreFichero = input("Introduce el nombre del fichero: ")
+    nombreFichero += ".txt"
+    try:
+        with open(nombreFichero, "w") as fichero:
+            fichero.write(f"Fichero creado con nombre '{nombreFichero}'.")
+            fichero.write("\n")
+        print("El fichero se ha creado correctamente.")
+    except IOError:
+        print("Error en los flujos de entrada y salida.")
+    except PermissionError:
+        print("No tienes permisos para crear un fichero.")
+    except Exception as e:
+        print("Error: ", type(e))
+
 def leerLinea():
     try:
         with open("ejemplo.txt", "r") as fichero:
@@ -49,20 +64,23 @@ def menu():
     print("Bienvenido.")
     while True:
         print("0. Salir.")
-        print("1. Leer todo el fichero.")
-        print("2. Leer línea a línea por introducción de ENTER.")
-        print("3. Añadir línea.")
+        print("1. Crear un fichero.")
+        print("2. Leer todo el fichero.")
+        print("3. Leer línea a línea por introducción de ENTER.")
+        print("4. Añadir línea.")
         opcion = pedirNumero()
         match opcion:
             case 0:
                 break
             case 1:
+                crearFichero()
+            case 2:
                 leerFichero()
                 continue
-            case 2:
+            case 3:
                 leerLinea()
                 continue
-            case 3:
+            case 4:
                 añadirLinea()
                 continue
             case _:
